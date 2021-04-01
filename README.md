@@ -22,6 +22,19 @@ Through the individuality and flexibility, you can choose which payment methods 
 * Easy way of managing ‘on-hold’ transactions (cancel or capture) and refunds (partial, full)
 * Find currently supported payment methods on https://www.novalnet.de/zahlungsabwicklung-und-online-zahlungsabwicklung-mit-der-novalnet-realisieren
 
+## Integrated Payment Methods
+-	Direct Debit SEPA
+-	Credit Card (3DSecure and non 3DSecure)
+-	Invoice
+-	Prepayment
+-	Barzahlen
+-	Instant Bank Transfer
+-	PayPal
+-	iDEAL
+-	eps
+-	giropay
+-	Przelewy24
+
 ## Contact
 Novalnet AG<br>
 Zahlungsinstitut (ZAG)<br>
