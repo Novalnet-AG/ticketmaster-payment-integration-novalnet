@@ -1,0 +1,63 @@
+#plg_rdmedia_novalnetcc{
+    width:100%;
+    color: #999999;
+    border:#999999 solid 1px !important;
+    margin-top: 25px;
+    margin-top:3% !important;
+    height:145px !important;
+}
+
+#plg_rdmedia_novalnetcc_cards{
+    width: 58%;
+    height: 40px;
+    margin-left: 2%;
+    margin-top: 1%;
+    padding-left: 3px;
+}
+
+#plg_rdmedia_novalnetcc_cards span{
+    font-size: 14px;
+}
+
+#plg_rdmedia_novalnetcc_confirmbutton{
+    width:116px;
+    margin-left: 61%;
+    position: absolute;
+}
+
+.novalnetcc_button {
+    height: 42px;
+    width: 65px;
+    background-image: url("../images/novalnet_cc.png"), url("../images/novalnet_cc_master.png");
+    background-repeat: no-repeat, no-repeat;
+    background-position: 10% center, 76% center;
+/*
+    background: rgba(0, 0, 0, 0) url("../images/novalnet_cc.png"), url("../images/novalnet_cc.png") no-repeat local center;
+*/
+    border:#dbdedf solid 1px;
+    color: #CCCCCC;
+    font-size: 85%;
+    text-transform: uppercase;
+}
+
+.novalnetcc_button:hover {
+    height: 42px;
+    width: 65px;
+    background-image: url("../images/novalnet_cc.png"), url("../images/novalnet_cc_master.png");
+    background-repeat: no-repeat, no-repeat;
+    background-position: 10% center, 76% center;
+    border:#003a54 solid 1px;
+    color: #CCCCCC;
+    font-size: 85%;
+    text-transform: uppercase;
+}
+
+.loader_cc {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background: url('../images/nn_loader.gif') 50% 50% no-repeat;
+}

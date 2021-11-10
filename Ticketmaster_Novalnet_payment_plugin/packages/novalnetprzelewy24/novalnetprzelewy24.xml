@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="rdmedia" method="upgrade">
+    <name>Novalnet Przelewy24</name>
+    <author>Novalnet</author>
+    <creationDate>September 2017</creationDate>
+    <copyright>Novalnet</copyright>
+    <license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+    <authorEmail>info@novalnet.de</authorEmail>
+    <authorUrl>https://www.novalnet.de</authorUrl>
+    <version>2.0.0</version>
+    <description>Novalnet Payment Provider</description>
+        <files>
+            <folder>languages</folder>
+            <folder>rdmedia_novalnetprzelewy24</folder>
+            <filename plugin="novalnetprzelewy24">novalnetprzelewy24.php</filename>
+        </files>
+        <languages>
+            <language tag="en-GB">languages/en-GB/en-GB.plg_rdmedia_novalnetprzelewy24.ini</language>
+            <language tag="de-DE">languages/de-DE/de-DE.plg_rdmedia_novalnetprzelewy24.ini</language>
+        </languages>
+        <config>
+            <fields name="params">
+                <fieldset name="basic">
+                    <field name="test_mode" type="list"
+                        default=""
+                        description="PLG_NOVALNETPRZELEWY24_TESTMODE_DESC"
+                        label="PLG_NOVALNETPRZELEWY24_TESTMODE">
+                        <option value="0">PLG_NOVALNETPRZELEWY24_FALSE</option>
+                        <option value="1">PLG_NOVALNETPRZELEWY24_TRUE</option>
+                    </field>
+					<field name="przelewy24_buyer_notification" type="text"
+                        default=""
+                        size=""
+                        description="PLG_NOVALNETPRZELEWY24_BUYER_NOTIFICATION_DESC"
+                        label="PLG_NOVALNETPRZELEWY24_BUYER_NOTIFICATION"
+                    />
+                    <field name="trans_reference_1" type="text"
+                        default=""
+                        size="15"
+                        description="PLG_NOVALNETPRZELEWY24_TRANSACTION_REFERENCE_ID1_DESC"
+                        label="PLG_NOVALNETPRZELEWY24_TRANSACTION_REFERENCE_ID1"
+                    />
+                    <field name="trans_reference_2" type="text"
+                        default=""
+                        size="15"
+                        description="PLG_NOVALNETPRZELEWY24_TRANSACTION_REFERENCE_ID2_DESC"
+                        label="PLG_NOVALNETPRZELEWY24_TRANSACTION_REFERENCE_ID2"
+                    />
+                    <field name="layout" type="list"
+                        default=""
+                        description="PLG_NOVALNETPRZELEWY24_LAYOUT_DESC"
+                        label="PLG_NOVALNETPRZELEWY24_LAYOUT">
+                        <option value="0">PLG_NOVALNETPRZELEWY24_HORIZON</option>
+                        <option value="1">PLG_NOVALNETPRZELEWY24_VERTICAL</option>
+                    </field>
+                    <field name="currency" type="list"
+                        default=""
+                        description="PLG_NOVALNETPRZELEWY24_DESIRED_CURRENCY_INFO"
+                        label="PLG_NOVALNETPRZELEWY24_DESIRED_CURRENCY">
+						<option value="EUR">PLG_NOVALNETPRZELEWY24_EURO</option>
+						<option value="USD">PLG_NOVALNETPRZELEWY24_DOLLAR</option>
+						<option value="PLN">PLG_NOVALNETPRZELEWY24_PLN</option>
+                    </field>
+                    <field name="failure_tpl" type="text"
+                        default=""
+                        size="15"
+                        description="PLG_NOVALNETPRZELEWY24_FAILED_MESSAGE_DESC"
+                        label="PLG_NOVALNETPRZELEWY24_FAILED_MESSAGE"
+                    />
+                    <field name="success_tpl" type="text"
+                        default=""
+                        size="15"
+                        description="PLG_NOVALNETPRZELEWY24_SUCCESS_MESSAGE_DESC"
+                        label="PLG_NOVALNETPRZELEWY24_SUCCESS_MESSAGE"
+                    />
+                </fieldset>
+            </fields>
+        </config>
+</extension>

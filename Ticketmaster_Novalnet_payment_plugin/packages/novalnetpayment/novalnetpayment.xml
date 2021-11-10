@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="rdmedia" method="upgrade">
+    <name>Novalnet Global Configuration</name>
+    <author>Novalnet</author>
+    <creationDate>September 2016</creationDate>
+    <copyright>Novalnet</copyright>
+    <license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+    <authorEmail>info@novalnet.de</authorEmail>
+    <authorUrl>https://www.novalnet.de</authorUrl>
+    <version>2.0.0</version>
+	<files>
+            <folder>helpers</folder>
+            <folder>languages</folder>
+            <filename plugin="novalnetpayment">novalnetpayment.php</filename>
+	</files>
+	<languages>
+		<language tag="en-GB">languages/en-GB/en-GB.plg_rdmedia_novalnetpayment.ini</language>
+		<language tag="de-DE">languages/de-DE/de-DE.plg_rdmedia_novalnetpayment.ini</language>
+	</languages>
+    <description><![CDATA[PLG_NOVALNETPAYMENT_DESCRIPTION]]></description>
+        <config>
+            <fields name="params">
+                <fieldset name="basic">
+                    <field name="merchant_id" type="text"
+                        default=""
+                        size="40"
+                        description="PLG_NOVALNETPAYMENT_MERCHANT_ID_DESC"
+                        label="PLG_NOVALNETPAYMENT_MERCHANT_ID"
+                    />
+                    <field name="merchant_authcode" type="text"
+                        default=""
+                        size="40"
+                        description="PLG_NOVALNETPAYMENT_MERCHANT_AUTHCODE_DESC"
+                        label="PLG_NOVALNETPAYMENT_MERCHANT_AUTHCODE"
+                    />
+                    <field name="product_id" type="text"
+                        default=""
+                        size="40"
+                        description="PLG_NOVALNETPAYMENT_PRODUCT_ID_DESC"
+                        label="PLG_NOVALNETPAYMENT_PRODUCT_ID"
+                    />
+                    <field name="tariff_id" type="text"
+                        default=""
+                        size="40"
+                        description="PLG_NOVALNETPAYMENT_TARIFF_ID_DESC"
+                        label="PLG_NOVALNETPAYMENT_TARIFF_ID"
+                    />
+                    <field name="password" type="text"
+                        default=""
+                        size="40"
+                        description="PLG_NOVALNETPAYMENT_PAYMENT_ACCESS_KEY_DESC"
+                        label="PLG_NOVALNETPAYMENT_PAYMENT_ACCESS_KEY"/>
+					<field name="manual_limit" type="text"
+                        default=""
+                        size="40"
+                        description="PLG_NOVALNETPAYMENT_MANUAL_LIMIT_DESC"
+                        label="PLG_NOVALNETPAYMENT_MANUAL_LIMIT"
+                    />
+					<field name="proxy" type="text"
+                        default=""
+                        size="40"
+                        description=""
+                        label="PLG_NOVALNETPAYMENT_PROXY"/>
+					<field name="gateway_time" type="text"
+                        default="240"
+                        size="40"
+                        description="PLG_NOVALNETPAYMENT_GATEWAY_TIME_LIMIT_DESC"
+                        label="PLG_NOVALNETPAYMENT_GATEWAY_TIME_LIMIT"/>
+					<field name="referrer_id" type="text"
+                        default=""
+                        size="15"
+                        description="PLG_NOVALNETPAYMENT_REFERRER_ID_DESC"
+                        label="PLG_NOVALNETPAYMENT_REFERRER_ID"
+                    />
+                    <field name="payment_logo" type="list"
+                        default="1"
+                        description="PLG_NOVALNETPAYMENT_PAYMENTLOGO_DESC"
+                        label="PLG_NOVALNETPAYMENT_PAYMENTLOGO">
+                        <option value="0">PLG_NOVALNETPAYMENT_FALSE</option>
+                        <option value="1">PLG_NOVALNETPAYMENT_TRUE</option>
+                    </field>
+                    <LabelText>
+                       <Text>PLG_NOVALNETPAYMENT_MERCHANT_SCRIPT</Text>
+                    </LabelText>					
+					<field name="test_mode" type="list"
+                        default="0"
+                        description=""
+                        label="PLG_NOVALNETPAYMENT_CALLBACK_TEST_MODE">
+                        <option value="0">PLG_NOVALNETPAYMENT_FALSE</option>
+                        <option value="1">PLG_NOVALNETPAYMENT_TRUE</option>
+                    </field>
+					<field name="email_mode" type="list"
+                        default="0"
+                        description=""
+                        label="PLG_NOVALNETPAYMENT_CALLBACK_EMAIL_CONFIGURATION">
+                        <option value="0">PLG_NOVALNETPAYMENT_FALSE</option>
+                        <option value="1">PLG_NOVALNETPAYMENT_TRUE</option>
+                    </field>
+					<field name="email_to" type="text"
+                        default=""
+                        size="15"
+                        description="PLG_NOVALNETPAYMENT_CALLBACK_EMAIL_BCC_ADDRESS_DESC"
+                        label="PLG_NOVALNETPAYMENT_CALLBACK_EMAIL_TO_ADDRESS"
+                    />
+					<field name="email_bcc" type="text"
+                        default=""
+                        size="15"
+                        description="PLG_NOVALNETPAYMENT_CALLBACK_EMAIL_BCC_ADDRESS_DESC"
+                        label="PLG_NOVALNETPAYMENT_CALLBACK_EMAIL_BCC_ADDRESS"
+                    />
+					<field name="notification_url" type="text"
+                        default=""
+                        size="15"
+                        description="PLG_NOVALNETPAYMENT_CALLBACK_NOTIFICATION_URL_DESC"
+                        label="PLG_NOVALNETPAYMENT_CALLBACK_NOTIFICATION_URL"
+                    />
+                </fieldset>
+                </fields>
+        </config>
+</extension>

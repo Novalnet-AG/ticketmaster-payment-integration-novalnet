@@ -1,0 +1,71 @@
+#plg_rdmedia_novalnetinvoice{
+	width:100%;
+	color: #999999;
+	border:#999999 solid 1px;
+	height:100px;
+	background: url(../images/novalnet_invoice.png) no-repeat;
+	margin-top: 25px;
+	background-position: 10px center;
+    height: 100% !important;
+    min-height: 100px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: #999999 transparent;
+    border-image: none;
+    border-left: 1px solid transparent;
+    border-right: 1px solid transparent;
+    border-style: solid;
+    border-width: 1px;
+}
+
+#plg_rdmedia_novalnetinvoice_cards{
+	width: 50%;
+	height: 40px;
+	margin-left: 185px;
+	margin-top: 23px;
+	padding-left: 3px;
+	font-size: 150%;
+    height: 100% !important;
+    margin-left: 38% !important;
+    margin-top: 0 !important;
+    width: 40% !important;
+}
+
+#plg_rdmedia_novalnetinvoice_cards span{
+	font-size: 14px;
+}
+
+#plg_rdmedia_novalnetinvoice_confirmbutton{
+	width:116px;
+	height: 87px;
+	margin-left: 600px;
+	margin-top: -48px;
+	position: absolute;
+	margin-left: 80% !important;
+    margin-top: 0 !important;
+    position: relative !important;
+}
+
+.novalnetinvoice_button {
+	height: 50px;
+	width: 116px;
+	background: url(../images/novalnet_invoice.png) repeat-x top;
+	border:#dbdedf solid 1px;
+	color: #CCCCCC;
+	font-size: 85%;
+	text-transform: uppercase;
+}
+
+.novalnetinvoice_button:hover {
+	height: 50px;
+	width: 116px;
+	background: url(../images/novalnet_invoice.png) repeat-x top;
+	border:#003a54 solid 1px;
+	color: #CCCCCC;
+	font-size: 85%;
+	text-transform: uppercase;
+}

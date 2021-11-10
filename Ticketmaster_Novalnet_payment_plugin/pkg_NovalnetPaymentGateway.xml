@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="package" version="1.6" method="upgrade">
+    <name>TicketMaster Novalnet Payment Gateway</name>
+    <creationDate>October 2016</creationDate>
+    <version>2.0.0</version>
+    <author>Novalnet AG</author>
+    <authorEmail>sales@novalnet.de</authorEmail>
+    <url>https://www.novalnet.de/</url>
+    <packagename>Novalnet Payment Gateway</packagename>
+    <files folder="packages">
+		<file type="plugin" id="novalnetpayment" group="rdmedia">novalnetpayment.zip</file>
+        <file type="plugin" id="novalnetcc" group="rdmedia">novalnetcc.zip</file>
+        <file type="plugin" id="novalnetbanktransfer" group="rdmedia">novalnetbanktransfer.zip</file>
+        <file type="plugin" id="novalneteps" group="rdmedia">novalneteps.zip</file>
+        <file type="plugin" id="novalnetgiropay" group="rdmedia">novalnetgiropay.zip</file>
+        <file type="plugin" id="novalnetideal" group="rdmedia">novalnetideal.zip</file>
+        <file type="plugin" id="novalnetinvoice" group="rdmedia">novalnetinvoice.zip</file>
+        <file type="plugin" id="novalnetpaypal" group="rdmedia">novalnetpaypal.zip</file>
+        <file type="plugin" id="novalnetprepayment" group="rdmedia">novalnetprepayment.zip</file>
+        <file type="plugin" id="novalnetsepa" group="rdmedia">novalnetsepa.zip</file>
+        <file type="plugin" id="novalnetprzelewy24" group="rdmedia">novalnetprzelewy24.zip</file>
+        <file type="plugin" id="novalnetbarzahlen" group="rdmedia">novalnetbarzahlen.zip</file>
+    </files>
+</extension>

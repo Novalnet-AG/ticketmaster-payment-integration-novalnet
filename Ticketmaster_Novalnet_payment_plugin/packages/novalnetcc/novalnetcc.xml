@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="rdmedia" method="upgrade">
+    <name>Novalnet Credit Card</name>
+    <author>Novalnet</author>
+    <creationDate>September 2016</creationDate>
+    <copyright>Novalnet</copyright>
+    <license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+    <authorEmail>info@novalnet.de</authorEmail>
+    <authorUrl>https://www.novalnet.de</authorUrl>
+    <version>2.0.0</version>
+    <description>Novalnet Payment Provider</description>
+        <files>
+            <folder>languages</folder>
+            <folder>rdmedia_novalnetcc</folder>
+            <filename plugin="novalnetcc">novalnetcc.php</filename>
+        </files>
+        <languages>
+            <language tag="en-GB">languages/en-GB/en-GB.plg_rdmedia_novalnetcc.ini</language>
+            <language tag="de-DE">languages/de-DE/de-DE.plg_rdmedia_novalnetcc.ini</language>
+        </languages>
+        <config>
+            <fields name="params">
+                <fieldset name="basic">
+                    <field name="test_mode" type="list"
+                        default=""
+                        description="PLG_NOVALNETCC_TESTMODE_DESC"
+                        label="PLG_NOVALNETCC_TESTMODE">
+                        <option value="0">PLG_NOVALNETCC_FALSE</option>
+                        <option value="1">PLG_NOVALNETCC_TRUE</option>
+                    </field>
+                    <field name="amex_logo" type="list"
+                        default="0"
+                        description=""
+                        label="PLG_NOVALNETCC_AMEXLOGO">
+                        <option value="0">PLG_NOVALNETCC_FALSE</option>
+                        <option value="1">PLG_NOVALNETCC_TRUE</option>
+                    </field>
+                    <field name="cartasi_logo" type="list"
+                        default="0"
+                        description=""
+                        label="PLG_NOVALNETCC_CARTASILOGO">
+                        <option value="0">PLG_NOVALNETCC_FALSE</option>
+                        <option value="1">PLG_NOVALNETCC_TRUE</option>
+                    </field>
+                    <field name="maestro_logo" type="list"
+                        default="0"
+                        description=""
+                        label="PLG_NOVALNETCC_MAESTROLOGO">
+                        <option value="0">PLG_NOVALNETCC_FALSE</option>
+                        <option value="1">PLG_NOVALNETCC_TRUE</option>
+                    </field>
+                    <field name="cc3d_enable" type="list"
+                        default=""
+                        description="PLG_NOVALNETCC_CC3D_ENABLE_DESC"
+                        label="PLG_NOVALNETCC_CC3D_ENABLE">
+                        <option value="0">PLG_NOVALNETCC_FALSE</option>
+                        <option value="1">PLG_NOVALNETCC_TRUE</option>
+                    </field>
+                    <field name="cc_buyer_notification" type="text"
+						description="PLG_NOVALNETCC_BUYER_NOTIFICATION_DESC"
+						label="PLG_NOVALNETCC_BUYER_NOTIFICATION"
+					/>
+                    <field name="trans_reference_1" type="text"
+                        default=""
+                        size="15"
+                        description="PLG_NOVALNETCC_TRANSACTION_REFERENCE_ID1_DESC"
+                        label="PLG_NOVALNETCC_TRANSACTION_REFERENCE_ID1"
+                    />
+                    <field name="trans_reference_2" type="text"
+                        default=""
+                        size="15"
+                        description="PLG_NOVALNETCC_TRANSACTION_REFERENCE_ID2_DESC"
+                        label="PLG_NOVALNETCC_TRANSACTION_REFERENCE_ID2"
+                    />
+                    <field name="layout" type="list"
+                        default=""
+                        description="PLG_NOVALNETCC_LAYOUT_DESC"
+                        label="PLG_NOVALNETCC_LAYOUT"
+                    >
+                        <option value="0">PLG_NOVALNETCC_HORIZON</option>
+                        <option value="1">PLG_NOVALNETCC_VERTICAL</option>
+                    </field>
+                    <field name="currency" type="list"
+                        default=""
+                        description="PLG_NOVALNETCC_DESIRED_CURRENCY_INFO"
+                        label="PLG_NOVALNETCC_DESIRED_CURRENCY"
+                        >
+                        <option value="EUR">PLG_NOVALNETCC_EURO</option>
+                        <option value="USD">PLG_NOVALNETCC_DOLLAR</option>
+                    </field>
+                    <field name="failure_tpl" type="text"
+                        default=""
+                        size="15"
+                        description="PLG_NOVALNETCC_FAILED_MESSAGE_DESC"
+                        label="PLG_NOVALNETCC_FAILED_MESSAGE"
+                    />
+                    <field name="success_tpl" type="text"
+                        default=""
+                        size="15"
+                        description="PLG_NOVALNETCC_SUCCESS_MESSAGE_DESC"
+                        label="PLG_NOVALNETCC_SUCCESS_MESSAGE"
+                    />
+                </fieldset>
+                </fields>
+        </config>
+</extension>

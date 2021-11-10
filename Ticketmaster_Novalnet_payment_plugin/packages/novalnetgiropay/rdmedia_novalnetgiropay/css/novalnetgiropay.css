@@ -1,0 +1,45 @@
+#plg_rdmedia_novalnetgiropay{
+    width:100%;
+    color: #999999;
+    border:#999999 solid 1px;
+    margin-top:3% !important;
+    height:145px !important;
+}
+
+#plg_rdmedia_novalnetgiropay_cards{
+   width: 58%;
+    height: 40px;
+    margin-left: 2%;
+    margin-top: 1%;
+    padding-left: 3px;
+}
+
+#plg_rdmedia_novalnetgiropay_cards span{
+    font-size: 14px;
+}
+
+#plg_rdmedia_novalnetgiropay_confirmbutton{
+    width:116px;
+    margin-left: 61%;
+    position: absolute;
+}
+
+.novalnetgiropay_button {
+    height: 50px;
+    width: 116px;
+    background: rgba(0, 0, 0, 0) url("../images/novalnet_giropay.png") no-repeat local center;
+    border:#dbdedf solid 1px;
+    color: #CCCCCC;
+    font-size: 85%;
+    text-transform: uppercase;
+}
+
+.novalnetgiropay_button:hover {
+    height: 50px;
+    width: 116px;
+    background: rgba(0, 0, 0, 0) url("../images/novalnet_giropay.png") no-repeat local center;
+    border:#dbdedf solid 1px;
+    color: #CCCCCC;
+    font-size: 85%;
+    text-transform: uppercase;
+}

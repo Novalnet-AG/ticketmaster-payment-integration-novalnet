@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="rdmedia" method="upgrade">
+    <name>Novalnet Barzahlen</name>
+    <author>Novalnet</author>
+    <creationDate>September 2017</creationDate>
+    <copyright>Novalnet</copyright>
+    <license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+    <authorEmail>info@novalnet.de</authorEmail>
+    <authorUrl>https://www.novalnet.de</authorUrl>
+    <version>2.0.0</version>
+    <description>Novalnet Payment Provider</description>
+        <files>
+            <folder>languages</folder>
+            <folder>rdmedia_novalnetbarzahlen</folder>
+            <filename plugin="novalnetbarzahlen">novalnetbarzahlen.php</filename>
+        </files>
+        <languages>
+            <language tag="en-GB">languages/en-GB/en-GB.plg_rdmedia_novalnetbarzahlen.ini</language>
+            <language tag="de-DE">languages/de-DE/de-DE.plg_rdmedia_novalnetbarzahlen.ini</language>
+        </languages>
+        <config>
+            <fields name="params">
+                <fieldset name="basic">
+                    <field name="test_mode" type="list"
+                        default=""
+                        description="PLG_NOVALNETBARZAHLEN_TESTMODE_DESC"
+                        label="PLG_NOVALNETBARZAHLEN_TESTMODE" >
+                        <option value="0">PLG_NOVALNETBARZAHLEN_FALSE</option>
+                        <option value="1">PLG_NOVALNETBARZAHLEN_TRUE</option>
+                    </field>
+					<field name="barzahlen_buyer_notification" type="text"
+                        default=""
+                        description="PLG_NOVALNETBARZAHLEN_BUYER_NOTIFICATION_DESC"
+                        label="PLG_NOVALNETBARZAHLEN_BUYER_NOTIFICATION"
+                    />
+                    <field name="slip_due_date" type="text"
+                        default=""
+                        size="15"
+                        description="PLG_NOVALNETBARZAHLEN_SLIP_DUE_DATE_DESC"
+                        label="PLG_NOVALNETBARZAHLEN_SLIP_DUE_DATE"
+                    />                    
+                    <field name="trans_reference_1" type="text"
+                        default=""
+                        size="15"
+                        description="PLG_NOVALNETBARZAHLEN_TRANSACTION_REFERENCE_ID1_DESC"
+                        label="PLG_NOVALNETBARZAHLEN_TRANSACTION_REFERENCE_ID1"
+                    />
+                    <field name="trans_reference_2" type="text"
+                        default=""
+                        size="15"
+                        description="PLG_NOVALNETBARZAHLEN_TRANSACTION_REFERENCE_ID2_DESC"
+                        label="PLG_NOVALNETBARZAHLEN_TRANSACTION_REFERENCE_ID2"
+                    />
+                    <field name="layout" type="list"
+                        default=""
+                        description="PLG_NOVALNETBARZAHLEN_LAYOUT_DESC"
+                        label="PLG_NOVALNETBARZAHLEN_LAYOUT" >
+                        <option value="0">PLG_NOVALNETBARZAHLEN_HORIZON</option>
+                        <option value="1">PLG_NOVALNETBARZAHLEN_VERTICAL</option>
+                    </field>
+                    <field name="currency" type="list"
+                        default=""
+                        description="PLG_NOVALNETBARZAHLEN_DESIRED_CURRENCY_INFO"
+                        label="PLG_NOVALNETBARZAHLEN_DESIRED_CURRENCY" >
+                    <option value="EUR">PLG_NOVALNETBARZAHLEN_EURO</option>
+                    <option value="USD">PLG_NOVALNETBARZAHLEN_DOLLAR</option>
+                    </field>
+                    <field name="failure_tpl" type="text"
+                        default=""
+                        size="15"
+                        description="PLG_NOVALNETBARZAHLEN_FAILED_MESSAGE_DESC"
+                        label="PLG_NOVALNETBARZAHLEN_FAILED_MESSAGE"
+                    />
+                    <field name="success_tpl" type="text"
+                        default=""
+                        size="15"
+                        description="PLG_NOVALNETBARZAHLEN_SUCCESS_MESSAGE_DESC"
+                        label="PLG_NOVALNETBARZAHLEN_SUCCESS_MESSAGE"
+                    />
+                </fieldset>
+            </fields>
+        </config>
+</extension>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="rdmedia" method="upgrade">
+    <name>Novalnet Direct Debit SEPA</name>
+    <author>Novalnet</author>
+    <creationDate>September 2015</creationDate>
+    <copyright>Novalnet</copyright>
+    <license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+    <authorEmail>info@novalnet.de</authorEmail>
+    <authorUrl>https://www.novalnet.de</authorUrl>
+    <version>2.0.0</version>
+    <description>Novalnet Payment Provider</description>
+        <files>
+            <folder>languages</folder>
+            <folder>rdmedia_novalnetsepa</folder>
+            <filename plugin="novalnetsepa">novalnetsepa.php</filename>
+        </files>
+        <languages>
+            <language tag="en-GB">languages/en-GB/en-GB.plg_rdmedia_novalnetsepa.ini</language>
+            <language tag="de-DE">languages/de-DE/de-DE.plg_rdmedia_novalnetsepa.ini</language>
+        </languages>
+        <config>
+            <fields name="params">
+                <fieldset name="basic">
+                    <field name="test_mode" type="list"
+                        default=""
+                        description="PLG_NOVALNETSEPA_TESTMODE_DESC"
+                        label="PLG_NOVALNETSEPA_TESTMODE" >
+                        <option value="0">PLG_NOVALNETSEPA_FALSE</option>
+                        <option value="1">PLG_NOVALNETSEPA_TRUE</option>
+                    </field>
+                    <field name="sepa_normal_due_date" type="text"
+                        default=""
+                        size="15"
+                        description="PLG_NOVALNETSEPA_NORMAL_DUE_DATE_DESC"
+                        label="PLG_NOVALNETSEPA_NORMAL_DUE_DATE"
+                    />
+                    <field name="auto_refill" type="list"
+                        default=""
+                        description="PLG_NOVALNETSEPA_REFILL_OPTION_DESC"
+                        label="PLG_NOVALNETSEPA_REFILL_OPTION" >
+                        <option value="0">PLG_NOVALNETSEPA_FALSE</option>
+                        <option value="1">PLG_NOVALNETSEPA_TRUE</option>
+                    </field>
+                    <!--<field name="guarantee_sepa" type="list"
+                        default=""
+                        description="PLG_NOVALNETSEPA_GUARANTEE_DESC"
+                        label="PLG_NOVALNETSEPA_GUARANTEE">
+                        <option value="0">PLG_NOVALNETSEPA_FALSE</option>
+                        <option value="1">PLG_NOVALNETSEPA_TRUE</option>
+                    </field>
+                    <field name="guarantee_sepa_force" type="list"
+                        default=""
+                        description="PLG_NOVALNETSEPA_GUARANTEE_FORCE_DESC"
+                        label="PLG_NOVALNETSEPA_GUARANTEE_FORCE">
+                        <option value="0">PLG_NOVALNETSEPA_FALSE</option>
+                        <option value="1">PLG_NOVALNETSEPA_TRUE</option>
+                    </field>-->
+					<field name="sepa_fraud_prevention" type="list"
+						default =""
+						description = "PLG_NOVALNETSEPA_FRAUD_PREVENTION_DESC"
+						label = "PLG_NOVALNETSEPA_FRAUD_PREVENTION">
+						<option value="NONE">PLG_NOVALNETSEPA_FRAUD_PREVENTION_OPTION1</option>
+						<option value="CALLBACK">PLG_NOVALNETSEPA_FRAUD_PREVENTION_OPTION2</option>
+						<option value="SMS">PLG_NOVALNETSEPA_FRAUD_PREVENTION_OPTION3</option>
+					</field>
+					<field name="sepa_fraud_prevention_amount_limit" type="text"
+						default =""
+						size = "15"
+						description = "PLG_NOVALNETSEPA_FRAUD_PREVENTION_GOODS_LIMIT_DESC"
+						label = "PLG_NOVALNETSEPA_FRAUD_PREVENTION_GOODS_LIMIT"
+					/>
+					<field name="sepa_buyer_notification" type="text"
+						default =""
+						size = ""
+						description = "PLG_NOVALNETSEPA_BUYER_NOTIFICATION_DESC"
+						label = "PLG_NOVALNETSEPA_BUYER_NOTIFICATION"
+					/>
+                    <field name="trans_reference_1" type="text"
+                        default=""
+                        size="15"
+                        description="PLG_NOVALNETSEPA_TRANSACTION_REFERENCE_ID1_DESC"
+                        label="PLG_NOVALNETSEPA_TRANSACTION_REFERENCE_ID1"
+                    />
+                    <field name="trans_reference_2" type="text"
+                        default=""
+                        size="15"
+                        description="PLG_NOVALNETSEPA_TRANSACTION_REFERENCE_ID2_DESC"
+                        label="PLG_NOVALNETSEPA_TRANSACTION_REFERENCE_ID2"
+                    />
+                    <field name="layout" type="list"
+                        default=""
+                        description="PLG_NOVALNETSEPA_LAYOUT_DESC"
+                        label="PLG_NOVALNETSEPA_LAYOUT" >
+                        <option value="0">PLG_NOVALNETSEPA_HORIZON</option>
+                        <option value="1">PLG_NOVALNETSEPA_VERTICAL</option>
+                    </field>
+                    <field name="currency" type="list"
+                        default=""
+                        description="PLG_NOVALNETSEPA_DESIRED_CURRENCY_INFO"
+                        label="PLG_NOVALNETSEPA_DESIRED_CURRENCY" >
+                        <option value="EUR">PLG_NOVALNETSEPA_EURO</option>
+                        <option value="USD">PLG_NOVALNETSEPA_DOLLAR</option>
+                    </field>
+                    <field name="failure_tpl" type="text"
+                        default=""
+                        size="15"
+                        description="PLG_NOVALNETSEPA_FAILED_MESSAGE_DESC"
+                        label="PLG_NOVALNETSEPA_FAILED_MESSAGE"
+                    />
+                    <field name="success_tpl" type="text"
+                        default=""
+                        size="15"
+                        description="PLG_NOVALNETSEPA_SUCCESS_MESSAGE_DESC"
+                        label="PLG_NOVALNETSEPA_SUCCESS_MESSAGE"
+                    />
+                </fieldset>
+            </fields>
+        </config>
+</extension>

@@ -1,0 +1,47 @@
+#plg_rdmedia_novalnetinvoice{
+    width:100%;
+    color: #999999;
+    border:#999999 solid 1px;
+    height:100px;
+    margin-top:3% !important;
+    height:113px !important;
+}
+
+#plg_rdmedia_novalnetinvoice_cards{
+    width: 58%;
+    height: 40px;
+    margin-left: 2%;
+    margin-top: 1%;
+    padding-left: 3px;
+}
+
+#plg_rdmedia_novalnetinvoice_cards span{
+    font-size: 14px;
+}
+
+#plg_rdmedia_novalnetinvoice_confirmbutton{
+    width:116px;
+    margin-left: 61%;
+    margin-top: -1%;
+    position: absolute;
+}
+
+.novalnetinvoice_button {
+    height: 50px;
+    width: 116px;
+    background: rgba(0, 0, 0, 0) url("../images/novalnet_invoice.png") no-repeat local center;
+    border:#dbdedf solid 1px;
+    color: #CCCCCC;
+    font-size: 85%;
+    text-transform: uppercase;
+}
+
+.novalnetinvoice_button:hover {
+    height: 50px;
+    width: 116px;
+    background: rgba(0, 0, 0, 0) url("../images/novalnet_invoice.png") no-repeat local center;
+    border:#dbdedf solid 1px;
+    color: #CCCCCC;
+    font-size: 85%;
+    text-transform: uppercase;
+}

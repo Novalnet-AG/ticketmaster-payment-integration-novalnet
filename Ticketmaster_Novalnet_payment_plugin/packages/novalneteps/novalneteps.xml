@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="rdmedia" method="upgrade">
+    <name>Novalnet eps</name>
+    <author>Novalnet</author>
+    <creationDate>September 2016</creationDate>
+    <copyright>Novalnet</copyright>
+    <license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+    <authorEmail>info@novalnet.de</authorEmail>
+    <authorUrl>https://www.novalnet.de</authorUrl>
+    <version>2.0.0</version>
+    <description>Novalnet Payment Provider</description>
+        <files>
+            <folder>languages</folder>
+            <folder>rdmedia_novalneteps</folder>
+            <filename plugin="novalneteps">novalneteps.php</filename>
+            <filename>novalneteps.xml</filename>
+        </files>
+        <languages>
+            <language tag="en-GB">languages/en-GB/en-GB.plg_rdmedia_novalneteps.ini</language>
+            <language tag="de-DE">languages/de-DE/de-DE.plg_rdmedia_novalneteps.ini</language>
+        </languages>
+        <config>
+            <fields name="params">
+                <fieldset name="basic">
+                    <field name="test_mode" type="list"
+                        default=""
+                        description="PLG_NOVALNETEPS_TESTMODE_DESC"
+                        label="PLG_NOVALNETEPS_TESTMODE">
+                        <option value="0">PLG_NOVALNETEPS_FALSE</option>
+                        <option value="1">PLG_NOVALNETEPS_TRUE</option>
+                    </field>
+					<field name="eps_buyer_notification" type="text"
+						default=""
+						size=""
+						description="PLG_NOVALNETEPS_BUYER_NOTIFICATION_DESC"
+						label="PLG_NOVALNETEPS_BUYER_NOTIFICATION"
+                    />
+                    <field name="trans_reference_1" type="text"
+                        default=""
+                        size="15"
+                        description="PLG_NOVALNETEPS_TRANSACTION_REFERENCE_ID1_DESC"
+                        label="PLG_NOVALNETEPS_TRANSACTION_REFERENCE_ID1"
+                    />
+                    <field name="trans_reference_2" type="text"
+                        default=""
+                        size="15"
+                        description="PLG_NOVALNETEPS_TRANSACTION_REFERENCE_ID2_DESC"
+                        label="PLG_NOVALNETEPS_TRANSACTION_REFERENCE_ID2"
+                    />
+                    <field name="layout" type="list"
+                        default=""
+                        description="PLG_NOVALNETEPS_LAYOUT_DESC"
+                        label="PLG_NOVALNETEPS_LAYOUT"
+                    >
+                        <option value="0">PLG_NOVALNETEPS_HORIZON</option>
+                        <option value="1">PLG_NOVALNETEPS_VERTICAL</option>
+                    </field>
+                    <field name="currency" type="list"
+                        default=""
+                        description="PLG_NOVALNETEPS_DESIRED_CURRENCY_INFO"
+                        label="PLG_NOVALNETEPS_DESIRED_CURRENCY"
+                    >
+                    <option value="EUR">PLG_NOVALNETEPS_EURO</option>
+                    <option value="USD">PLG_NOVALNETEPS_DOLLAR</option>
+                    </field>
+                    <field name="failure_tpl" type="text"
+                        default=""
+                        size="15"
+                        description="PLG_NOVALNETEPS_FAILED_MESSAGE_DESC"
+                        label="PLG_NOVALNETEPS_FAILED_MESSAGE"
+                    />
+                    <field name="success_tpl" type="text"
+                        default=""
+                        size="15"
+                        description="PLG_NOVALNETEPS_SUCCESS_MESSAGE_DESC"
+                        label="PLG_NOVALNETEPS_SUCCESS_MESSAGE"
+                    />
+                </fieldset>
+            </fields>
+        </config>
+</extension>

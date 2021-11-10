@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="rdmedia" method="upgrade">
+    <name>Novalnet Instant Bank Transfer</name>
+    <author>Novalnet</author>
+    <creationDate>September 2016</creationDate>
+    <copyright>Novalnet AG</copyright>
+    <license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+    <authorEmail>info@novalnet.de</authorEmail>
+    <authorUrl>>https://www.novalnet.de</authorUrl>
+    <version>2.0.0</version>
+    <description>Novalnet Payment Provider</description>
+        <files>
+            <folder>languages</folder>
+            <folder>rdmedia_novalnetbanktransfer</folder>
+            <filename plugin="novalnetbanktransfer">novalnetbanktransfer.php</filename>
+        </files>
+        <languages>
+            <language tag="en-GB">languages/en-GB/en-GB.plg_rdmedia_novalnetbanktransfer.ini</language>
+            <language tag="de-DE">languages/de-DE/de-DE.plg_rdmedia_novalnetbanktransfer.ini</language>
+        </languages>
+        <config>
+            <fields name="params">
+                <fieldset name="basic">
+                    <field name="test_mode" type="list"
+                        default="0"
+                        description="PLG_NOVALNETBANKTRANSFER_TESTMODE_DESC"
+                        label="PLG_NOVALNETBANKTRANSFER_TESTMODE">
+                        <option value="0">PLG_NOVALNETBANKTRANSFER_FALSE</option>
+                        <option value="1">PLG_NOVALNETBANKTRANSFER_TRUE</option>
+                    </field>
+					<field name="instant_bank_buyer_notification" type="text"
+                        default=""
+                        size=""
+                        description="PLG_NOVALNETBANKTRANSFER_BUYER_NOTIFICATION_DESC"
+                        label="PLG_NOVALNETBANKTRANSFER_BUYER_NOTIFICATION"
+                    />
+                    <field name="trans_reference_1" type="text"
+                        default=""
+                        size="15"
+                        description="PLG_NOVALNETBANKTRANSFER_TRANSACTION_REFERENCE_ID1_DESC"
+                        label="PLG_NOVALNETBANKTRANSFER_TRANSACTION_REFERENCE_ID1"
+                    />
+                    <field name="trans_reference_2" type="text"
+                        default=""
+                        size="15"
+                        description="PLG_NOVALNETBANKTRANSFER_TRANSACTION_REFERENCE_ID2_DESC"
+                        label="PLG_NOVALNETBANKTRANSFER_TRANSACTION_REFERENCE_ID2"
+                    />
+                    <field name="layout" type="list"
+                        default=""
+                        description="PLG_NOVALNETBANKTRANSFER_LAYOUT_DESC"
+                        label="PLG_NOVALNETBANKTRANSFER_LAYOUT"
+                    >
+                        <option value="0">PLG_NOVALNETBANKTRANSFER_HORIZON</option>
+                        <option value="1">PLG_NOVALNETBANKTRANSFER_VERTICAL</option>
+                    </field>
+                    <field name="currency" type="list"
+                        default=""
+                        description="PLG_NOVALNETBANKTRANSFER_DESIRED_CURRENCY_INFO"
+                        label="PLG_NOVALNETBANKTRANSFER_DESIRED_CURRENCY"
+                        >
+                        <option value="EUR">PLG_NOVALNETBANKTRANSFER_EURO</option>
+                        <option value="USD">PLG_NOVALNETBANKTRANSFER_DOLLAR</option>
+                    </field>
+                    <field name="failure_tpl" type="text"
+                        default=""
+                        size="15"
+                        description="PLG_NOVALNETBANKTRANSFER_FAILED_MESSAGE_DESC"
+                        label="PLG_NOVALNETBANKTRANSFER_FAILED_MESSAGE"
+                    />
+                    <field name="success_tpl" type="text"
+                        default=""
+                        size="15"
+                        description="PLG_NOVALNETBANKTRANSFER_SUCCESS_MESSAGE_DESC"
+                        label="PLG_NOVALNETBANKTRANSFER_SUCCESS_MESSAGE"
+                    />
+                </fieldset>
+            </fields>
+        </config>
+</extension>

@@ -1,0 +1,45 @@
+#plg_rdmedia_novalnetprzelewy24{
+    width:100%;
+    color: #999999;
+    border:#999999 solid 1px;
+    height:145px !important;
+    margin-top:3% !important;
+}
+
+#plg_rdmedia_novalnetprzelewy24_cards{
+    width: 58%;
+    height: 40px;
+    margin-left: 2%;
+    margin-top: 1%;
+    padding-left: 3px;
+}
+
+#plg_rdmedia_novalnetprzelewy24_cards span{
+    font-size: 14px;
+}
+
+#plg_rdmedia_novalnetprzelewy24_confirmbutton{
+    width:116px;
+    margin-left: 61%;
+    position: absolute;
+}
+
+.novalnetprzelewy24_button {
+    height: 50px;
+    width: 116px;
+    background: rgba(0, 0, 0, 0) url("../images/novalnet_przelewy24.png") no-repeat local center;
+    border:#dbdedf solid 1px;
+    color: #CCCCCC;
+    font-size: 85%;
+    text-transform: uppercase;
+}
+
+.novalnetprzelewy24_button:hover {
+    height: 50px;
+    width: 116px;
+    background: rgba(0, 0, 0, 0) url("../images/novalnet_przelewy24.png") no-repeat local center;
+    border:#003a54 solid 1px;
+    color: #CCCCCC;
+    font-size: 85%;
+    text-transform: uppercase;
+}
