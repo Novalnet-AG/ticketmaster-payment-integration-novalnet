@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="rdmedia" method="upgrade">
+    <name>Novalnet PayPal</name>
+    <author>Novalnet AG</author>
+    <creationDate>December 2013</creationDate>
+    <copyright>2013 Novalnet AG</copyright>
+    <license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+    <authorEmail>test@novalnet.de</authorEmail>
+    <authorUrl>www.novalnet.de</authorUrl>
+    <version>1.0.0</version>
+    <description>Novalnet Payment Provider</description>
+    
+		<files>
+			<filename plugin="novalnetpaypal">novalnetpaypal.php</filename>
+			<folder>rdmedia_novalnetpaypal</folder>
+		</files>
+		
+		<languages>
+			<language tag="en-GB">language/en-GB.plg_rdmedia_novalnetpaypal.ini</language>
+			<language tag="de-DE">language/de-DE.plg_rdmedia_novalnetpaypal.ini</language>
+		</languages>			
+	
+		<config>
+		
+			<fields name="params">
+			
+				<fieldset name="basic">
+					<field name="merchant_id" type="text"
+						default=""
+						size="40"
+						description="PLG_NOVALNETPAYPAL_MERCHANT_ID_DESC"
+						label="PLG_NOVALNETPAYPAL_MERCHANT_ID"
+					/>				
+					<field name="merchant_authcode" type="text"
+						default=""
+						size="40"
+						description="PLG_NOVALNETPAYPAL_MERCHANT_AUTHCODE_DESC"
+						label="PLG_NOVALNETPAYPAL_MERCHANT_AUTHCODE"
+					/>	
+					<field name="product_id" type="text"
+						default=""
+						size="40"
+						description="PLG_NOVALNETPAYPAL_PRODUCT_ID_DESC"
+						label="PLG_NOVALNETPAYPAL_PRODUCT_ID"
+					/>					
+					<field name="tariff_id" type="text"
+						default=""
+						size="40"
+						description="PLG_NOVALNETPAYPAL_TARIFF_ID_DESC"
+						label="PLG_NOVALNETPAYPAL_TARIFF_ID"
+					/>
+					<field name="password" type="text"
+						default=""
+						size="40"
+						description="PLG_NOVALNETPAYPAL_PAYMENT_ACCESS_KEY_DESC"
+						label="PLG_NOVALNETPAYPAL_PAYMENT_ACCESS_KEY"
+					/>
+					<field name="api_user" type="text"
+						default=""
+						size="40"
+						description="PLG_NOVALNETPAYPAL_API_USER_DESC"
+						label="PLG_NOVALNETPAYPAL_API_USER"
+					/>
+					<field name="api_pswd" type="text"
+						default=""
+						size="40"
+						description="PLG_NOVALNETPAYPAL_API_PASSWORD_DESC"
+						label="PLG_NOVALNETPAYPAL_API_PASSWORD"
+					/>
+					<field name="api_signature" type="text"
+						default=""
+						size="40"
+						description="PLG_NOVALNETPAYPAL_API_SIGNATURE_DESC"
+						label="PLG_NOVALNETPAYPAL_API_SIGNATURE"
+					/>
+					<field name="test_mode" type="list"
+						default=""
+						description="PLG_NOVALNETPAYPAL_TESTMODE_DESC"
+						label="PLG_NOVALNETPAYPAL_TESTMODE"
+					>
+						<option value="0">JOFF</option>
+						<option value="1">JON</option>
+					</field>
+					<field name="layout" type="list"
+						default=""
+						description="PLG_NOVALNETPAYPAL_LAYOUT_DESC"
+						label="PLG_NOVALNETPAYPAL_LAYOUT"
+					>
+						<option value="0">PLG_NOVALNETPAYPAL_HORIZON</option>
+						<option value="1">PLG_NOVALNETPAYPAL_VERTICAL</option>
+					</field>
+					<field name="currency" type="list"
+						default=""
+						description="PLG_NOVALNETPAYPAL_DESIRED_CURRENCY_INFO"
+						label="PLG_NOVALNETPAYPAL_DESIRED_CURRENCY"
+					>			
+					<option value="EUR">PLG_NOVALNETPAYPAL_EURO</option>
+					<option value="USD">PLG_NOVALNETPAYPAL_DOLLAR</option>
+				</field>
+				<field name="failure_tpl" type="text"
+						default=""
+						size="15"
+						description="PLG_NOVALNETPAYPAL_FAILED_MESSAGE_DESC"
+						label="PLG_NOVALNETPAYPAL_FAILED_MESSAGE"
+					/>	
+	
+					<field name="success_tpl" type="text"
+						default=""
+						size="15"
+						description="PLG_NOVALNETPAYPAL_SUCCESS_MESSAGE_DESC"
+						label="PLG_NOVALNETPAYPAL_SUCCESS_MESSAGE"
+					/>		
+					
+				</fieldset>
+				
+			</fields>
+			
+		</config>
+
+</extension>

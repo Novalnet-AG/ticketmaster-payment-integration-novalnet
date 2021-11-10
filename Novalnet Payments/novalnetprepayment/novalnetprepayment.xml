@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="rdmedia" method="upgrade">
+    <name>Novalnet Prepayment</name>
+    <author>Novalnet AG</author>
+    <creationDate>December 2013</creationDate>
+    <copyright>201 Novalnet AG</copyright>
+    <license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+    <authorEmail>test@novalnet.de</authorEmail>
+    <authorUrl>www.novalnet.de</authorUrl>
+    <version>1.0.0</version>
+    <description>Novalnet Payment Provider</description>
+    
+		<files>
+			<filename plugin="novalnetprepayment">novalnetprepayment.php</filename>
+			<folder>rdmedia_novalnetprepayment</folder>
+		</files>
+		
+		<languages>
+			<language tag="en-GB">language/en-GB.plg_rdmedia_novalnetprepayment.ini</language>
+			<language tag="de-DE">language/de-DE.plg_rdmedia_novalnetprepayment.ini</language>
+		</languages>			
+	
+		<config>
+		
+			<fields name="params">
+			
+				<fieldset name="basic">
+					<field name="merchant_id" type="text"
+						default=""
+						size="40"
+						description="PLG_NOVALNETPREPAYMENT_MERCHANT_ID_DESC"
+						label="PLG_NOVALNETPREPAYMENT_MERCHANT_ID"
+					/>				
+					<field name="merchant_authcode" type="text"
+						default=""
+						size="40"
+						description="PLG_NOVALNETPREPAYMENT_MERCHANT_AUTHCODE_DESC"
+						label="PLG_NOVALNETPREPAYMENT_MERCHANT_AUTHCODE"
+					/>	
+					<field name="product_id" type="text"
+						default=""
+						size="40"
+						description="PLG_NOVALNETPREPAYMENT_PRODUCT_ID_DESC"
+						label="PLG_NOVALNETPREPAYMENT_PRODUCT_ID"
+					/>					
+					<field name="tariff_id" type="text"
+						default=""
+						size="40"
+						description="PLG_NOVALNETPREPAYMENT_TARIFF_ID_DESC"
+						label="PLG_NOVALNETPREPAYMENT_TARIFF_ID"
+					/>
+					<field name="test_mode" type="list"
+						default=""
+						description="PLG_NOVALNETPREPAYMENT_TESTMODE_DESC"
+						label="PLG_NOVALNETPREPAYMENT_TESTMODE"
+					>
+						<option value="0">JOFF</option>
+						<option value="1">JON</option>
+					</field>
+					<field name="layout" type="list"
+						default=""
+						description="PLG_NOVALNETPREPAYMENT_LAYOUT_DESC"
+						label="PLG_NOVALNETPREPAYMENT_LAYOUT"
+					>
+						<option value="0">PLG_NOVALNETPREPAYMENT_HORIZON</option>
+						<option value="1">PLG_NOVALNETPREPAYMENT_VERTICAL</option>
+					</field>
+					<field name="currency" type="list"
+						default=""
+						description="PLG_NOVALNETPREPAYMENT_DESIRED_CURRENCY_INFO"
+						label="PLG_NOVALNETPREPAYMENT_DESIRED_CURRENCY"
+					>			
+					<option value="EUR">PLG_NOVALNETPREPAYMENT_EURO</option>
+					<option value="USD">PLG_NOVALNETPREPAYMENT_DOLLAR</option>
+				</field>
+				<field name="failure_tpl" type="text"
+						default=""
+						size="15"
+						description="PLG_NOVALNETPREPAYMENT_FAILED_MESSAGE_DESC"
+						label="PLG_NOVALNETPREPAYMENT_FAILED_MESSAGE"
+					/>	
+	
+					<field name="success_tpl" type="text"
+						default=""
+						size="15"
+						description="PLG_NOVALNETPREPAYMENT_SUCCESS_MESSAGE_DESC"
+						label="PLG_NOVALNETPREPAYMENT_SUCCESS_MESSAGE"
+					/>		
+					
+				</fieldset>
+				
+			</fields>
+			
+		</config>
+
+</extension>

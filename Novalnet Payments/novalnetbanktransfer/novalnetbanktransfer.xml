@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="rdmedia" method="upgrade">
+    <name>Novalnet Instant Bank Transfer</name>
+    <author>Novalnet AG</author>
+    <creationDate>December 2013</creationDate>
+    <copyright>201 Novalnet AG</copyright>
+    <license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+    <authorEmail>test@novalnet.de</authorEmail>
+    <authorUrl>www.novalnet.de</authorUrl>
+    <version>1.0.0</version>
+    <description>Novalnet Payment Provider</description>
+    
+		<files>
+			<filename plugin="novalnetbanktransfer">novalnetbanktransfer.php</filename>
+			<folder>rdmedia_novalnetbanktransfer</folder>
+		</files>
+		
+		<languages>
+			<language tag="en-GB">language/en-GB.plg_rdmedia_novalnetbanktransfer.ini</language>
+			<language tag="de-DE">language/de-DE.plg_rdmedia_novalnetbanktransfer.ini</language>
+		</languages>			
+	
+		<config>
+		
+			<fields name="params">
+			
+				<fieldset name="basic">
+					<field name="merchant_id" type="text"
+						default=""
+						size="40"
+						description="PLG_NOVALNETBANKTRANSFER_MERCHANT_ID_DESC"
+						label="PLG_NOVALNETBANKTRANSFER_MERCHANT_ID"
+					/>				
+					<field name="merchant_authcode" type="text"
+						default=""
+						size="40"
+						description="PLG_NOVALNETBANKTRANSFER_MERCHANT_AUTHCODE_DESC"
+						label="PLG_NOVALNETBANKTRANSFER_MERCHANT_AUTHCODE"
+					/>	
+					<field name="product_id" type="text"
+						default=""
+						size="40"
+						description="PLG_NOVALNETBANKTRANSFER_PRODUCT_ID_DESC"
+						label="PLG_NOVALNETBANKTRANSFER_PRODUCT_ID"
+					/>					
+					<field name="tariff_id" type="text"
+						default=""
+						size="40"
+						description="PLG_NOVALNETBANKTRANSFER_TARIFF_ID_DESC"
+						label="PLG_NOVALNETBANKTRANSFER_TARIFF_ID"
+					/>
+					<field name="password" type="text"
+						default=""
+						size="40"
+						description="PLG_NOVALNETBANKTRANSFER_PAYMENT_ACCESS_KEY_DESC"
+						label="PLG_NOVALNETBANKTRANSFER_PAYMENT_ACCESS_KEY"
+					/>
+					<field name="test_mode" type="list"
+						default=""
+						description="PLG_NOVALNETBANKTRANSFER_TESTMODE_DESC"
+						label="PLG_NOVALNETBANKTRANSFER_TESTMODE"
+					>
+						<option value="0">JOFF</option>
+						<option value="1">JON</option>
+					</field>
+					<field name="layout" type="list"
+						default=""
+						description="PLG_NOVALNETBANKTRANSFER_LAYOUT_DESC"
+						label="PLG_NOVALNETBANKTRANSFER_LAYOUT"
+					>
+						<option value="0">PLG_NOVALNETBANKTRANSFER_HORIZON</option>
+						<option value="1">PLG_NOVALNETBANKTRANSFER_VERTICAL</option>
+					</field>
+					<field name="currency" type="list"
+						default=""
+						description="PLG_NOVALNETBANKTRANSFER_DESIRED_CURRENCY_INFO"
+						label="PLG_NOVALNETBANKTRANSFER_DESIRED_CURRENCY"
+					>			
+					<option value="EUR">PLG_NOVALNETBANKTRANSFER_EURO</option>
+					<option value="USD">PLG_NOVALNETBANKTRANSFER_DOLLAR</option>
+				</field>
+				<field name="failure_tpl" type="text"
+						default=""
+						size="15"
+						description="PLG_NOVALNETBANKTRANSFER_FAILED_MESSAGE_DESC"
+						label="PLG_NOVALNETBANKTRANSFER_FAILED_MESSAGE"
+					/>	
+	
+					<field name="success_tpl" type="text"
+						default=""
+						size="15"
+						description="PLG_NOVALNETBANKTRANSFER_SUCCESS_MESSAGE_DESC"
+						label="PLG_NOVALNETBANKTRANSFER_SUCCESS_MESSAGE"
+					/>		
+					
+				</fieldset>
+				
+			</fields>
+			
+		</config>
+
+</extension>

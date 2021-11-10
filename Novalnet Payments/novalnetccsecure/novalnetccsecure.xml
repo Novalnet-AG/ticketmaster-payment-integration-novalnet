@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="rdmedia" method="upgrade">
+    <name>Novalnet Credit Card 3D Secure</name>
+    <author>Novalnet AG</author>
+    <creationDate>December 2013</creationDate>
+    <copyright>2013 Novalnet AG</copyright>
+    <license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+    <authorEmail>test@novalnet.de</authorEmail>
+    <authorUrl>www.novalnet.de</authorUrl>
+    <version>1.0.0</version>
+    <description>Novalnet Payment Provider</description>
+    
+		<files>
+			<filename plugin="novalnetccsecure">novalnetccsecure.php</filename>
+			<folder>rdmedia_novalnetccsecure</folder>
+		</files>
+		
+		<languages>
+			<language tag="en-GB">language/en-GB.plg_rdmedia_novalnetccsecure.ini</language>
+			<language tag="de-DE">language/de-DE.plg_rdmedia_novalnetccsecure.ini</language>
+		</languages>			
+	
+		<config>
+		
+			<fields name="params">
+			
+				<fieldset name="basic">
+					<field name="merchant_id" type="text"
+						default=""
+						size="40"
+						description="PLG_NOVALNETCCSECURE_MERCHANT_ID_DESC"
+						label="PLG_NOVALNETCCSECURE_MERCHANT_ID"
+					/>				
+					<field name="merchant_authcode" type="text"
+						default=""
+						size="40"
+						description="PLG_NOVALNETCCSECURE_MERCHANT_AUTHCODE_DESC"
+						label="PLG_NOVALNETCCSECURE_MERCHANT_AUTHCODE"
+					/>	
+					<field name="product_id" type="text"
+						default=""
+						size="40"
+						description="PLG_NOVALNETCCSECURE_PRODUCT_ID_DESC"
+						label="PLG_NOVALNETCCSECURE_PRODUCT_ID"
+					/>					
+					<field name="tariff_id" type="text"
+						default=""
+						size="40"
+						description="PLG_NOVALNETCCSECURE_TARIFF_ID_DESC"
+						label="PLG_NOVALNETCCSECURE_TARIFF_ID"
+					/>	
+					<field name="manual_limit" type="text"
+						default=""
+						size="40"
+						description="PLG_NOVALNETCCSECURE_MANUAL_LIMIT_DESC"
+						label="PLG_NOVALNETCCSECURE_MANUAL_LIMIT"
+					/>
+					<field name="second_product_id" type="text"
+						default=""
+						size="40"
+						description="PLG_NOVALNETCCSECURE_SECOND_PRODUCT_ID_DESC"
+						label="PLG_NOVALNETCCSECURE_SECOND_PRODUCT_ID"
+					/>
+					<field name="second_tariff_id" type="text"
+						default=""
+						size="40"
+						description="PLG_NOVALNETCCSECURE_SECOND_TARIFF_ID_DESC"
+						label="PLG_NOVALNETCCSECURE_SECOND_TARIFF_ID"
+					/>
+					<field name="test_mode" type="list"
+						default=""
+						description="PLG_NOVALNETCCSECURE_TESTMODE_DESC"
+						label="PLG_NOVALNETCCSECURE_TESTMODE"
+					>
+						<option value="0">JOFF</option>
+						<option value="1">JON</option>
+					</field>
+					<field name="layout" type="list"
+						default=""
+						description="PLG_NOVALNETCCSECURE_LAYOUT_DESC"
+						label="PLG_NOVALNETCCSECURE_LAYOUT"
+					>
+						<option value="0">PLG_NOVALNETCCSECURE_HORIZON</option>
+						<option value="1">PLG_NOVALNETCCSECURE_VERTICAL</option>
+					</field>
+					<field name="currency" type="list"
+						default=""
+						description="PLG_NOVALNETCCSECURE_DESIRED_CURRENCY_INFO"
+						label="PLG_NOVALNETCCSECURE_DESIRED_CURRENCY"
+					>			
+					<option value="EUR">PLG_NOVALNETCCSECURE_EURO</option>
+					<option value="USD">PLG_NOVALNETCCSECURE_DOLLAR</option>
+				</field>
+				<field name="failure_tpl" type="text"
+						default=""
+						size="15"
+						description="PLG_NOVALNETCCSECURE_FAILED_MESSAGE_DESC"
+						label="PLG_NOVALNETCCSECURE_FAILED_MESSAGE"
+					/>	
+	
+					<field name="success_tpl" type="text"
+						default=""
+						size="15"
+						description="PLG_NOVALNETCCSECURE_SUCCESS_MESSAGE_DESC"
+						label="PLG_NOVALNETCCSECURE_SUCCESS_MESSAGE"
+					/>		
+					
+				</fieldset>
+				
+			</fields>
+			
+		</config>
+
+</extension>
